@@ -1,0 +1,31 @@
+<% if notice%>
+<aside id="notice"><%=notice%></aside>
+<%end%>
+
+<%= form_tag(movies_path, method: :get) do %>
+<%= text_field_tag :term, params[:term] %>
+<%= submit_tag 'Search' %>
+<% end %>
+
+<h1>Your Pragmatic Catalog</h1>
+
+<ul class="catalog">
+    <%cache @movies do%>
+    <% @movies.each do |movie|%>
+    <%cache movie do%>
+    <li>
+    <%=image_tag(movie.image_url)%>
+        <h2><%=movie.name%></h2>
+        <h3><%=movie.year%></h3>
+    <p>
+        <%=sanitize(movie.description)%>
+        </p>
+    <div class="price">
+        <%=number_to_currency(movie.price)%>
+        <%=button_to 'Add to Cart', line_items_path(movie_id: movie), remote: true%>
+        </div>
+    </li>
+    <%end%>
+    <%end%>
+    <%end%>
+</ul>

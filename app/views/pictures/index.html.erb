@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Oscars Pictures </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Nominations</th>
+      <th>Rating</th>
+      <th>Genre1</th>
+      <th>Genre2</th>
+      <th>Release</th>
+      <th>Synopsis</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pictures.each do |picture| %>
+      <tr>
+        <td><%= picture.name %></td>
+        <td><%= picture.year %></td>
+        <td><%= picture.nominations %></td>
+        <td><%= picture.rating %></td>
+        <td><%= picture.genre1 %></td>
+        <td><%= picture.genre2 %></td>
+        <td><%= picture.release %></td>
+        <td><%= picture.synopsis %></td>
+        <td><%= link_to 'Show', picture %></td>
+        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
+        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Picture', new_picture_path %>

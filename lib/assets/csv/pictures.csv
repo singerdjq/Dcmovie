@@ -1,0 +1,88 @@
+name,year,nominations,rating,duration,genre1,genre2,release
+ Birdman,2014,9,7.8,119,Comedy,Drama,November
+ 12 Years a Slave,2013,9,8.1,134,Biography,Drama,November
+ Argo,2012,7,7.8,120,Biography,Drama,October
+ The Artist,2011,10,8,100,Comedy,Drama,October
+ The King's Speech,2010,12,8,118,Biography,Drama,December
+ The Hurt Locker,2009,9,7.6,131,Drama,History,July
+ Slumdog Millionaire,2008,10,8,120,Drama,Romance,January
+ No Country for Old Men,2007,8,8.1,122,Crime,Drama,November
+ The Departed,2006,5,8.5,151,Crime,Drama,October
+ Crash,2005,6,7.9,112,Drama,Drama,May
+ Million Dollar Baby,2004,7,8.1,132,Drama,Sport,January
+ The Lord of the Rings: The Return of the King,2003,11,8.9,201,Adventure,Drama,December
+ Chicago,2002,13,7.2,113,Comedy,Crime,February
+ A Beautiful Mind,2001,8,8.2,135,Biography,Drama,January
+ Gladiator,2000,12,8.5,155,Action,Drama,May
+ American Beauty,1999,8,8.4,122,Drama,Romance,October
+ Shakespeare in Love,1998,13,7.2,123,Comedy,Drama,December
+ Titanic,1997,14,7.7,194,Drama,Romance,December
+ The English Patient,1996,12,7.4,162,Drama,Romance,November
+ Braveheart,1995,10,8.4,178,Biography,Drama,May
+ Forrest Gump,1994,13,8.8,142,Drama,Romance,July
+ Schindler's List,1993,12,8.9,195,Biography,Drama,December
+ Unforgiven,1992,10,8.3,131,Western,Western,August
+ The Silence of the Lambs,1991,7,8.6,118,Crime,Drama,February
+ Dances with Wolves,1990,12,8,181,Adventure,Drama,November
+ Driving Miss Daisy,1989,9,7.4,99,Comedy,Drama,January
+ Rain Man,1988,8,8,133,Drama,Drama,December
+ The Last Emperor,1987,9,7.8,163,Biography,Drama,October
+ Platoon,1986,8,8.1,120,Drama,War,February
+ Out of Africa,1985,11,7.2,161,Biography,Drama,December
+ Amadeus,1984,11,8.3,160,Biography,Drama,October
+ Terms of Endearment,1983,11,7.4,132,Comedy,Drama,December
+ Gandhi,1982,11,8.1,191,Biography,Drama,December
+ Chariots of Fire,1981,7,7.3,125,Biography,Drama,May
+ Ordinary People,1980,6,7.8,124,Drama,Drama,February
+ Kramer vs. Kramer,1979,9,7.8,105,Drama,Drama,December
+ The Deer Hunter,1978,9,8.2,183,Drama,War,February
+ Annie Hall,1977,5,8.1,93,Comedy,Romance,April
+ Rocky,1976,10,8.1,120,Drama,Sport,December
+ One Flew Over the Cuckoo's Nest,1975,9,8.7,133,Drama,Drama,November
+ The Godfather: Part II,1974,11,9,202,Crime,Drama,December
+ The Sting,1973,10,8.3,129,Comedy,Crime,December
+ The Godfather,1972,11,9.2,175,Crime,Drama,March
+ The French Connection,1971,8,7.8,104,Action,Crime,October
+ Patton,1970,10,8,172,Biography,Drama,April
+ Midnight Cowboy,1969,7,7.9,113,Drama,Drama,June
+ Oliver!,1968,11,7.5,153,Drama,Family,September
+ In the Heat of the Night,1967,7,8,109,Crime,Drama,October
+ A Man for All Seasons,1966,8,7.9,120,Biography,Drama,May
+ The Sound of Music,1965,10,8,174,Biography,Drama,March
+ My Fair Lady,1964,12,7.9,170,Drama,Family,December
+ Tom Jones,1963,10,6.8,128,Adventure,Comedy,December
+ Lawrence of Arabia,1962,10,8.4,216,Adventure,Biography,January
+ West Side Story,1961,11,7.6,152,Crime,Drama,December
+ The Apartment,1960,10,8.3,125,Comedy,Drama,September
+ Ben-Hur,1959,12,8.1,212,Adventure,Drama,December
+ Gigi,1958,9,6.9,115,Comedy,Musical,August
+ The Bridge on the River Kwai,1957,8,8.2,161,Adventure,Drama,October
+ Around the World in 80 Days,1956,8,6.8,175,Adventure,Comedy,October
+ Marty,1955,8,7.7,90,Drama,Romance,June
+ On the Waterfront,1954,12,8.3,108,Crime,Drama,June
+ From Here to Eternity,1953,13,7.8,118,Drama,Romance,October
+ The Greatest Show on Earth,1952,5,6.7,152,Drama,Family,May
+ An American in Paris,1951,8,7.3,113,Musical,Romance,November
+ All About Eve,1950,14,8.3,138,Comedy,Drama,January
+ All the King's Men,1949,7,7.6,110,Drama,Drama,January
+ Hamlet,1948,7,7.9,155,Drama,Drama,August
+ Gentleman's Agreement,1947,8,7.4,118,Drama,Drama,February
+ The Best Years of Our Lives,1946,8,8.2,172,Drama,Romance,June
+ The Lost Weekend,1945,7,8,101,Drama,Film-Noir,November
+ Going My Way,1944,10,7.3,126,Comedy,Drama,October
+ Casablanca,1943,8,8.6,102,Drama,Romance,January
+ Mrs. Miniver,1942,12,7.6,134,Drama,Romance,December
+ How Green Was My Valley,1941,10,7.8,118,Drama,Family,April
+ Rebecca,1940,11,8.2,130,Drama,Mystery,April
+ Gone With the Wind,1939,13,8.2,238,Drama,Romance,January
+ You Can't Take it With You,1938,7,8,126,Comedy,Drama,November
+ The Life of Emile Zola,1937,10,7.3,116,Biography,Drama,October
+ The Great Ziegfeld,1936,7,6.8,176,Biography,Drama,April
+ Mutiny on the Bounty,1935,8,7.8,132,Adventure,Drama,
+ It Happened One Night,1934,5,8.2,105,Comedy,Romance,February
+ Cavalcade,1933,4,6.1,112,Drama,Romance,April
+ Grand Hotel,1931,1,7.6,112,Drama,Romance,September
+ Cimarron,1930,7,6,123,Drama,Western,February
+ All Quiet on the Western Front,1929,4,8.1,136,Drama,War,August
+ The Broadway Melody,1928,3,6.4,100,Musical,Romance,June
+ Wings,1927,1,7.8,144,Drama,Romance,January

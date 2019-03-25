@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @picture.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @picture.year %>
+</p>
+
+<p>
+  <strong>Nominations:</strong>
+  <%= @picture.nominations %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @picture.rating %>
+</p>
+
+<p>
+  <strong>Genre1:</strong>
+  <%= @picture.genre1 %>
+</p>
+
+<p>
+  <strong>Genre2:</strong>
+  <%= @picture.genre2 %>
+</p>
+
+<p>
+  <strong>Release:</strong>
+  <%= @picture.release %>
+</p>
+
+<p>
+  <strong>Synopsis:</strong>
+  <%= @picture.synopsis %>
+</p>
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>
