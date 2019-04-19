@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_21_231137) do
+ActiveRecord::Schema.define(version: 2019_03_25_104318) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -65,6 +65,9 @@ ActiveRecord::Schema.define(version: 2019_03_21_231137) do
     t.integer "pay_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.time "activated_at"
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -86,6 +89,9 @@ ActiveRecord::Schema.define(version: 2019_03_21_231137) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.time "activated_at"
   end
 
 end

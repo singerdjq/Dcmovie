@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :line_items
   resources :carts
-    resources :account_activations, only:[:edit]
+
   #resources :movies
  #root 'movies#index'
 root 'store#index', as: 'store_index'

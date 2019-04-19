@@ -60,4 +60,14 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+    #设定默认的路径为localhost: 3000
+#config.action_mailer.default_url_options = {host: 'localhost: 3000'}
+# 设定发送并打开邮件的方法来自于letter_opener
+#config.action_mailer.delivery_method = :letter_opener
+    
+    config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :test
+    host = 'charm-vega-3000.codio-box.uk'
+config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+
 end

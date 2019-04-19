@@ -1,25 +1,10 @@
 class OrderMailer < ApplicationMailer
-
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.order_mailer.received.subject
-  #
-  def received
-    @order = order
-
-    mail to: order.email, subject: 'Pragmatic Store Order Confirmation'
-  end
-
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.order_mailer.shipped.subject
-  #
-  def shipped
-    @order = order
-
-    mail to: order.email, subject: 'Pragmatic Store Order Confirmation'
+def notify_order_placed(order)  #建立通知信
+   @order = order   #记录订单(为下面步骤3的order_url参数传入做准备)
+   mail to: @order.email, subject: "Thanks order"
   
-  end
-end
+   end
+
+
+   end
+

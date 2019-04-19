@@ -35,13 +35,15 @@ class OrdersController < ApplicationController
       if @order.save
           Cart.destroy(session[:cart_id])
           session[:cart_id]=nil
-          OrderMailer.received(@order).deliver_later
+          #OrderMailer.received(@order).deliver_later
+         #OrderMailer.notify_order_placed(@order).deliver!
         format.html { redirect_to @order, notice: 'Thank you for your order.'}#@order, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
+        #OrderMailer.notify_order_placed(@order).deliver!
     end
   end
 
