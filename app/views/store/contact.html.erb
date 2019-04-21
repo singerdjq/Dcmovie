@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Our address</h1>
+    <p>University of Aberdeen
+       King's College,
+       Aberdeen,
+       AB24 3FX
+       
+       Tel: +44 (0)1224 272000
+       </p>
+
+<div id="map" style="width:150%;height:500px;"></div>
+
+<script type=text/javascript>
+
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: 57.1648, lng:-2.09814};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 15, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+<script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeTMsORTlz-_YkpxoRFZM8_xW_-3CoUqc&callback=initMap"></script>
+
+</body>
+</html>
+    

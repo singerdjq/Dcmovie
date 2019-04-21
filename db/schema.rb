@@ -10,9 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_25_104318) do
+ActiveRecord::Schema.define(version: 2019_04_21_202824) do
 
   create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,6 +51,15 @@ ActiveRecord::Schema.define(version: 2019_03_25_104318) do
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
     t.index ["movie_id"], name: "index_line_items_on_movie_id"
     t.index ["order_id"], name: "index_line_items_on_order_id"
+  end
+
+  create_table "microposts", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_microposts_on_user_id"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -92,6 +106,8 @@ ActiveRecord::Schema.define(version: 2019_03_25_104318) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.time "activated_at"
+    t.string "reset_digest"
+    t.string "email"
   end
 
 end

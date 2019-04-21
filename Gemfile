@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+    gem 'rspec-rails'
     gem 'sqlite3', '~>1.3.6'
 end
 
@@ -59,8 +60,11 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+    gem 'cucumber-rails', :require=>false
+gem 'database_cleaner'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
+ gem 'factory_bot'
   gem 'chromedriver-helper'
     # Use sqlite3 as the database for Active Record
 end
@@ -72,3 +76,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'feedjira'
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'bootstrap-will_paginate', '1.0.0'

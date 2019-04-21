@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'password_resets/new'
+  get 'password_resets/edit'
   resources :pictures
   resources :feeds
   get 'admin/index'
@@ -14,10 +16,13 @@ Rails.application.routes.draw do
  get  '/chart',    to: 'store#chart'
   get  '/news',   to: 'pictures#index'
   get  '/contact', to: 'store#contact'
+    
   resources :users
   resources :orders
   resources :line_items
   resources :carts
+resources :microposts,          only: [:create, :destroy]
+    resources :password_resets,     only: [:new, :create, :edit, :update]
 
   #resources :movies
  #root 'movies#index'

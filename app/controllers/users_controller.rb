@@ -13,6 +13,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+      @user = User.find(params[:id])
+      @micropost = current_user.microposts.build
+      @microposts = @user.microposts.paginate(page: params[:page])
+      @feed_items = current_user.feed.paginate(page: params[:page])
   end
 
   # GET /users/new
@@ -77,7 +81,7 @@ class UsersController < ApplicationController
     
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless @user == current_user
+      redirect_to(user_url) unless @user == current_user
     end
     def admin_user
     redirect_to(user_url) unless current_user.present? && current_user.admin?

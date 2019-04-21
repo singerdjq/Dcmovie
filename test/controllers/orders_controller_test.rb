@@ -4,6 +4,38 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @order = orders(:one)
   end
+    
+  test "should be valid" do
+    assert @order.valid?
+  end
+    
+ test "name should be present" do
+    @order.name = ""
+    assert_not @order.valid?
+  end
+    
+ test "name should not be too long" do
+    @order.name = "a" * 51
+    assert_not @order.valid?
+  end
+    
+    test "email should be present" do
+    @order.email = "     "
+    assert_not @order.valid?
+  end
+    
+    test "email should not be too long" do
+    @order.email = "a" * 244 + "@example.com"
+    assert_not @order.valid?
+  end
+    
+   
+
+ test "email addresses should be unique" do
+    duplicate_order = @order.dup
+    @order.save
+    assert_not duplicate_order.valid?
+  end
 
   test "should get index" do
     get orders_url
