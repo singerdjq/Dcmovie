@@ -50,7 +50,7 @@ Initialize Databases
 Execute rails db:migrate
 
 Populate the tables
-To populate tables for data, 1 task need to be executed.
+To populate tables for data, 1 task need to be executed and homepage movie resources and charts page the world’s yearly top-grossing movie index and news page Oscar pictures are created from IMDB.
 
 Execute rake rake pictures_list:load_pictures to popluate the news table.
 
@@ -66,7 +66,7 @@ Only logged in users, they post their microposts in their account. Users see oth
 To create default users, execute rake user:initialize .
 
 Test Locally
-Using Rspec and Test:: Unit for Tests. Rspec for testing create user and login. Test:: Unit for tesing orders name, address and email, for testing users name and password. 
+Using Rspec and Test:: Unit for Tests. Rspec for testing create user and login. Test:: Unit for testing orders name, address and email, for testing users name and password. 
 
 When everything is ready, execute rails server, then open localhost:3000 in the browser to access the application. You can specify the port by rails server -p [port_number].
 
@@ -106,7 +106,7 @@ Only logged in users can view the raw data stored on the database tables by clic
 Googlemap javascript for address
 
 E-commerce system
-Guests add the item in their cart and check out without login. The item is kept until guests empty the cart. 
+Guests add the item in their cart and check out without login. The item is kept until guests empty the cart. With search function to find the movies. 
 
 Authentication System
 It has three types of users, Admin, general users and guests. 
