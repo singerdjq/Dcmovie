@@ -99,24 +99,24 @@ Then use the same commands as local deployment to initialize the application, bu
 
 After that, the heroku application is ready to use, run heroku run to open the application in the browser.
 
-Features
-Visualize Data on the Highcharts and show Trend of Figure
+## Features
+### Visualize Data on the Highcharts and show Trend of Figure
 In the chart page, guests can see the world’s yearly top-grossing movie index from 1980-2018 on the wolrd map. Guests will be navigated to the page with a line chart showing how the figure changes from 1980-2018. and 
 the table on this page shows the movie of that year.
 
-View Data
+### View Data
 Only logged in users can view the raw data stored on the database tables by clicking on the news section.
 
-Googlemap javascript for address
+### Googlemap javascript for address
 
-E-commerce system
+### E-commerce system
 Guests add the item in their cart and check out without login. The item is kept until guests empty the cart. With search function to find the movies. 
 
-Authentication System
+### Authentication System
 It has three types of users, Admin, general users and guests. 
 
-Micropost feed
+### Micropost feed
 Only logged in users can post the microposts. 
 
-Email authentication
+### Email authentication
 When order is placed and password reset, guest and user could get email with rails order_mailer and user_mailer
