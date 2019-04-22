@@ -4,73 +4,77 @@ This project is an individual assignment of advanced web application development
 
 The application developed by me is a Ruby on Rails application. This website is mainly for viewing the copyright of movies. In order to maintain the copyright of the film, we sell movie resources for users to watch movies. I specially selected the best box office movie of the year 1980-2018 to be the theme of this time. User add the item in the cart and place order without login. Once order placed, they get an email notification. I also use highcharts to display the world’s yearly top-grossing movie from 1980-2018 and display the Oscar Pictures table from 1927-2014. Users contact us using google map and telephone. Customers sign up and log in for authentication. When users log in the account, they could post microposts feed.  
 
-Demo of the Application
+## Demo of the Application
 A live version is deployed on Heroku, and can be accessed using the following link:
 
 
 
-Default Users
-Username		Password
-admin	       admin
-sakura	     sakura
+### Default Users
+| Username      | Password       |     
+| --------------|:--------------:| 
+| sakura        | sakura         |   
+| admin         | admin          |  
 
-Defaulr Orders
-Name	Address	Email	pay type	
-sakura	6a printfield talk	sakura@0319.com	Credit card	Show	Edit	Destroy
+### Defaulr Orders
+| Name      | Address      |  Email   | pay type   |
+| --------------|:--------------:| :--------------:|:--------------:|
+|sakura	        |6a printfield talk	|sakura@0319.com   |	Credit card	  |
+
 Vistors are required to login if they need to see the news tables.
 
-System Requirement
+## System Requirement
 The application is built on Ruby on Rails framework, with bootstrap, bootstrap-will_paginate, JQuery and highcharts. 
 
-Ruby Version and Gems
+### Ruby Version and Gems
 Ruby ~> 2.5.1, Rails ~> 5.2.2
 
 csv gem for loading the data to the database table. Use sqlite3 for local database and pg gem for connecting to PostgreSQL database in the Heroku production environment.
 
-Bootstrap, bootstrap-will_paginate and JQuery
+### Bootstrap, bootstrap-will_paginate and JQuery
 Bootstrap 4.3.1 and bootstrap-will_paginate 1.0.0 and JQuery 3.2.1 are used in this project, the CSS and JS files are loaded from BootstrapCDN.
 
-Highcharts
+### Highcharts
 Line Chart from HighCharts is used in the visualization of data.
 
-Googlemap javascript
+### Googlemap javascript
 Using google map javascript to display the address
 
-Databases
+### Databases
 Sqlite3 is used in local development and testing, and PostgreSQL is used in the production environment.
 
-Local Deployment of the Application
-Prepare Files
+## Local Deployment of the Application
+
+### Prepare Files
 Run git clone to clone the application from online repository or download the compressed file and extract it to a local folder.
 
-Install Dependencies
+### Install Dependencies
 Execute bundle install to install all the required gems.
 
-Initialize Databases
+### Initialize Databases
 Execute rails db:migrate
 
-Populate the tables
+### Populate the tables
 To populate tables for data, 1 task need to be executed and homepage movie resources and charts page the world’s yearly top-grossing movie index and news page Oscar pictures are created from IMDB.
 
 Execute rake rake pictures_list:load_pictures to popluate the news table.
 
-Add to Cart for order system
+### Add to Cart for order system
 Using Ajax for guest to place their orders. When they check out, they get notify_order_placed email in rails order_mailer.
 
-Initialize User System
+### Initialize User System
 Only logged in users are allowed to manage the databases for data and create, edit, and delete movies and orders. The admin is allowed to edit, and delete users and other general users have no privilege to edit or delete the users. 
 
-Microposts system
+### Microposts system
 Only logged in users, they post their microposts in their account. Users see other users microposts and they cannot edit or delete them. More than 30 microposts, they automatically paginate in pages. 
 
 To create default users, execute rake user:initialize .
 
-Test Locally
+### Test Locally
 Using Rspec and Test:: Unit for Tests. Rspec for testing create user and login. Test:: Unit for testing orders name, address and email, for testing users name and password. 
 
 When everything is ready, execute rails server, then open localhost:3000 in the browser to access the application. You can specify the port by rails server -p [port_number].
 
-Deploy to Heroku
+## Deploy to Heroku
 The application has been tested to be deployed on heroku.
 
 Register a heroku account.
