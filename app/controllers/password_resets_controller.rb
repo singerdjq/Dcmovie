@@ -4,6 +4,7 @@ class PasswordResetsController < ApplicationController
     before_action :check_expiration, only: [:edit, :update]
     
   def new
+     
   end
     
      def create
@@ -49,7 +50,7 @@ class PasswordResetsController < ApplicationController
     def valid_user
       unless (@user && @user.activated? &&
               @user.authenticated?(:reset, params[:id]))
-        redirect_to root_url
+        redirect_to edit_password_reset_url
       end
     end
     
