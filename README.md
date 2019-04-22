@@ -28,7 +28,7 @@ The application is built on Ruby on Rails framework, with bootstrap, bootstrap-w
 ### Ruby Version and Gems
 Ruby ~> 2.5.1, Rails ~> 5.2.2
 
-csv gem for loading the data to the database table. Use sqlite3 for local database and pg gem for connecting to PostgreSQL database in the Heroku production environment.
+``csv`` gem for loading the data to the database table. Use ``sqlite3`` for local database and ``pg`` gem for connecting to PostgreSQL database in the Heroku production environment.
 
 ### Bootstrap, bootstrap-will_paginate and JQuery
 Bootstrap 4.3.1 and bootstrap-will_paginate 1.0.0 and JQuery 3.2.1 are used in this project, the CSS and JS files are loaded from BootstrapCDN.
@@ -45,18 +45,18 @@ Sqlite3 is used in local development and testing, and PostgreSQL is used in the 
 ## Local Deployment of the Application
 
 ### Prepare Files
-Run git clone to clone the application from online repository or download the compressed file and extract it to a local folder.
+Run ``git clone`` to clone the application from online repository or download the compressed file and extract it to a local folder.
 
 ### Install Dependencies
-Execute bundle install to install all the required gems.
+Execute ``bundle install`` to install all the required gems.
 
 ### Initialize Databases
-Execute rails db:migrate
+Execute ``rails db:migrate``.
 
 ### Populate the tables
 To populate tables for data, 1 task need to be executed and homepage movie resources and charts page the world’s yearly top-grossing movie index and news page Oscar pictures are created from IMDB.
 
-Execute rake rake pictures_list:load_pictures to popluate the news table.
+Execute  ``rake pictures_list:load_pictures`` to popluate the news table.
 
 ### Add to Cart for order system
 Using Ajax for guest to place their orders. When they check out, they get notify_order_placed email in rails order_mailer.
@@ -67,35 +67,35 @@ Only logged in users are allowed to manage the databases for data and create, ed
 ### Microposts system
 Only logged in users, they post their microposts in their account. Users see other users microposts and they cannot edit or delete them. More than 30 microposts, they automatically paginate in pages. 
 
-To create default users, execute rake user:initialize .
+To create default users, execute ``rake user:initialize`` .
 
 ### Test Locally
 Using Rspec and Test:: Unit for Tests. Rspec for testing create user and login. Test:: Unit for testing orders name, address and email, for testing users name and password. 
 
-When everything is ready, execute rails server, then open localhost:3000 in the browser to access the application. You can specify the port by rails server -p [port_number].
+When everything is ready, execute `rails server`, then open ``localhost:3000`` in the browser to access the application. You can specify the port by `rails server -p [port_number]`.
 
 ## Deploy to Heroku
 The application has been tested to be deployed on heroku.
 
-Register a heroku account.
+1. Register a heroku account.
 
-Install heroku cli.
+2. Install `heroku cli`.
 
-Execute heroku login.
+3. Execute `heroku login`.
 
-Navigate the directory of the project and execute heroku create.
+4. Navigate the directory of the project and execute `heroku create`.
 
-Execute git push heroku master to deploy the application to your own heroku app space. If you want to push a different branch other than the master, execute git push heroku [your_branch]:master.
+5. Execute `git push heroku master` to deploy the application to your own heroku app space. If you want to push a different branch other than the `master`, execute `git push heroku [your_branch]:master`.
 
 More information can be found on heroku official tutorial: https://devcenter.heroku.com/articles/getting-started-with-ruby .
 
 Then use the same commands as local deployment to initialize the application, but add heroku run before to make it run on Heroku.
 
-heroku run Rails db:migrate
+``heroku run Rails db:migrate``
 
-heroku run rake pictures_list:load_pictures
+``heroku run rake pictures_list:load_pictures``
 
-heroku run rake user:initialize
+``heroku run rake user:initialize``
 
 After that, the heroku application is ready to use, run heroku run to open the application in the browser.
 
